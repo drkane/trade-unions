@@ -37,6 +37,6 @@ for dlcat in dlcats:
         else:
             scheduled = "true"
         print name, website, latestreport, moreinfo, scheduled
-        record = { "name" : name , "website" : website , "latestreport" : latestreport, "moreinfo" : moreinfo, "scheduled" : scheduled }
+        record = { "name" : unicode(name) , "website" : unicode(website) , "latestreport" : unicode(latestreport), "moreinfo" : unicode(moreinfo), "scheduled" : scheduled }
         # save records to the datastore
         scraperwiki.sqlite.save(["name"], record) 
